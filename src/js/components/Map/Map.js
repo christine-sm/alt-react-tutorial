@@ -29,6 +29,7 @@ export default class Map extends Component {
     super(props);
     this.view = {};
     this.map = {};
+    this.state= {count: 0};
   }
 
   componentDidMount() {
@@ -82,8 +83,16 @@ export default class Map extends Component {
     });
   };
 
+  buttonClicked = () => {
+    console.log(this);
+    this.setState({
+      count: this.state.count + 1
+    });
+  };
+
   render () {
     const { shareModalActive, locateModalActive } = this.props;
+    const { count } = this.state; // var count = this.state.count
 
     return (
       <div ref='map' className='map'>
@@ -91,6 +100,10 @@ export default class Map extends Component {
         <MapControls />
         <LocateModal active={locateModalActive} />
         <ShareModal active={shareModalActive} />
+        <div className='button'>
+          <div>{count}</div>
+          <button onClick={this.buttonClicked}>Counter</button>
+        </div>
       </div>
     );
   }
