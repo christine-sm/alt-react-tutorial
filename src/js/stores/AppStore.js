@@ -1,6 +1,11 @@
 import dispatcher from 'js/dispatcher';
 import actions from 'actions/AppActions';
 
+// items- array of objects (label, status, unique id, key values pairs)
+// id = 0;
+// let uuid = () => ++id;
+// try to only use props in child components
+
 class AppStore {
 
   constructor () {
