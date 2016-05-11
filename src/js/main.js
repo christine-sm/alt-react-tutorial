@@ -27,10 +27,7 @@ const lazyloadAssets = () => {
   loadCSS(`//js.arcgis.com/${window._versions.esri}/esri/css/main.css`);
 };
 
-const initializeApp = () => {
-  ReactDOM.render(<App />, document.getElementById('root'));
-};
-
 configureApp();
 lazyloadAssets();
-initializeApp();
+
+ReactDOM.render(<App />, document.getElementById('root'));

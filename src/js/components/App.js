@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppStore from 'stores/AppStore';
+import actions from 'actions/AppActions';
 
 export default class App extends Component {
 
@@ -13,10 +14,15 @@ export default class App extends Component {
     this.setState(AppStore.getState());
   };
 
+  setTitle = () => {
+    actions.setTitle('New');
+  };
+
   render() {
     return(
       <div className='page-content'>
         <h1>{this.state.title}</h1>
+        <button onClick={this.setTitle}>Click</button>
       </div>
     )
   }
