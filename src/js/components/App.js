@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AppStore from 'stores/AppStore';
-import appActions from 'actions/AppActions';
+import AppActions from 'actions/AppActions';
+import Task from 'components/Task';
 
 export default class App extends Component {
 
@@ -15,25 +16,23 @@ export default class App extends Component {
   };
 
   setTitle = () => {
-    appActions.setTitle('New');
+    AppActions.setTitle('New');
   };
 
   render() {
-    return(
+    return (
       <div className='page-content'>
         <h1>To Do List</h1>
         <input type='text' placeholder='New Task'/>
         <button>Add</button>
-        <h2>Tasks</h2>
+        <Task />
         <ul>
           <li>Task 1<input type ='checkbox'/></li>
           <li>Task 2<input type ='checkbox'/></li>
         </ul>
         <button>Delete Completed Tasks</button>
-        <h1>{this.state.title}</h1>
-        <button onClick={this.setTitle}>Click</button>
       </div>
-    )
+    );
   }
 
 }

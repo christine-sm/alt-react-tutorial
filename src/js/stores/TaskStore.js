@@ -1,5 +1,5 @@
 import dispatcher from 'js/dispatcher';
-import TaskActions from 'actions/TaskActions';
+import taskActions from 'actions/TaskActions';
 class TaskStore {
 
   constructor () {
