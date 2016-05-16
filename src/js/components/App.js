@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppStore from 'stores/AppStore';
-import actions from 'actions/AppActions';
+import appActions from 'actions/AppActions';
 
 export default class App extends Component {
 
@@ -15,7 +15,7 @@ export default class App extends Component {
   };
 
   setTitle = () => {
-    actions.setTitle('New');
+    appActions.setTitle('New');
   };
 
   render() {
