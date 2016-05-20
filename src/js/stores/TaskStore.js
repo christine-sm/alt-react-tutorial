@@ -5,7 +5,7 @@ class TaskStore {
   constructor () {
     this.task = [
       {
-        label: 'Task 1',
+        label: 'Task One',
         isChecked: false,
         uuid: 1
       },

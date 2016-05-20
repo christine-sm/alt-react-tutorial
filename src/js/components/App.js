@@ -23,14 +23,7 @@ export default class App extends Component {
     return (
       <div className='page-content'>
         <h1>To Do List</h1>
-        <input type='text' placeholder='New Task'/>
-        <button>Add</button>
         <Task />
-        <ul>
-          <li>Task 1<input type ='checkbox'/></li>
-          <li>Task 2<input type ='checkbox'/></li>
-        </ul>
-        <button>Delete Completed Tasks</button>
       </div>
     );
   }
