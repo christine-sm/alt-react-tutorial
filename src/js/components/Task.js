@@ -20,11 +20,16 @@ export default class App extends Component {
 
   render() {
     return (
-      <h2>Tasks</h2>
-      //   <button>Delete Completed Tasks</button>
-      //   <h1>{this.state.title}</h1>
-      //   <button onClick={this.setTitle}>Click</button>
-      // </div>
+      <div>
+        <input type='text' placeholder='New Task'/>
+        <button>Add</button>
+        <h2>Tasks</h2>
+        <ul>
+          <li>Task 1<input type ='checkbox'/></li>
+          <li>Task 2<input type ='checkbox'/></li>
+        </ul>
+        <button>Delete Completed Tasks</button>
+      </div>
     );
   }
 

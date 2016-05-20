@@ -5,12 +5,12 @@ class TaskStore {
   constructor () {
     this.task = [
       {
-        label: 'Task 1',
+        label: 'Task One',
         isChecked: false,
         uuid: 1
       },
       {
-        label: 'Task 2',
+        label: 'Task Two',
         isChecked: false,
         uuid: 2
       }

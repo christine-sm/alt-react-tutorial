@@ -9,10 +9,10 @@ import AppActions from 'actions/AppActions';
 class AppStore {
 
   constructor () {
-    this.title = 'My Title';
-    this.bindListeners({
-      setTitle: AppActions.setTitle
-    });
+    this.title = 'To-Do List';
+    // this.bindListeners({
+    //   setTitle: AppActions.setTitle
+    // });
   }
 
   setTitle (title) {
