@@ -1,5 +1,5 @@
 import dispatcher from 'js/dispatcher';
-import taskActions from 'actions/TaskActions';
+// import taskActions from 'actions/TaskActions';
 class TaskStore {
 
   constructor () {
@@ -15,15 +15,15 @@ class TaskStore {
         uuid: 2
       }
     ];
-    this.bindListeners({
-      setTask: taskActions.setTask
-    });
+    // this.bindListeners({
+    //   setTask: taskActions.setTask
+    // });
   }
 
-  setTask (task) {
-    this.task = task;
-    this.emitChange();
-  }
+  // setTask (task) {
+  //   this.task = task;
+  //   this.emitChange();
+  // }
 
 }
 

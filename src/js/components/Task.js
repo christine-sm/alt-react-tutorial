@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import TaskStore from 'stores/TaskStore';
 import TaskActions from 'actions/TaskActions';
 
-export default class App extends Component {
+export default class Task extends Component {
 
-  // constructor (props) {
-  //   super(props);
-  //   this.state = TaskStore.getState();
-  //   TaskStore.listen(this.storeDidUpdate);
-  // }
-  //
-  // storeDidUpdate = () => {
-  //   this.setState(TaskStore.getState());
-  // };
+  constructor (props) {
+    super(props);
+    this.state = TaskStore.getState();
+    TaskStore.listen(this.storeDidUpdate);
+  }
+
+  storeDidUpdate = () => {
+    this.setState(TaskStore.getState());
+  };
   //
   // setTitle = () => {
   //   TaskActions.setTitle('New');
@@ -25,8 +25,8 @@ export default class App extends Component {
         <button>Add</button>
         <h2>Tasks</h2>
         <ul>
-          <li>Task 1<input type ='checkbox'/></li>
-          <li>Task 2<input type ='checkbox'/></li>
+          <li>{this.state.task[0].label}<input type ='checkbox'/></li>
+          <li>{this.state.task[1].label}<input type ='checkbox'/></li>
         </ul>
         <button>Delete Completed Tasks</button>
       </div>

@@ -1,5 +1,5 @@
 import dispatcher from 'js/dispatcher';
-import AppActions from 'actions/AppActions';
+// import AppActions from 'actions/AppActions';
 
 // items- array of objects (label, status, unique id, key values pairs)
 // id = 0;
@@ -15,10 +15,10 @@ class AppStore {
     // });
   }
 
-  setTitle (title) {
-    this.title = title;
-    // this.emitChange();
-  }
+  // setTitle (title) {
+  //   this.title = title;
+  //   // this.emitChange();
+  // }
 
 }
 
